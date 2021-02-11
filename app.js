@@ -155,6 +155,7 @@ function multiplyAnyArray(dynamicArray) {
     let q=0;
     return [mult,`The numbers ${dynamicArray[q++]},${dynamicArray[q++]},${dynamicArray[q++]},${dynamicArray[q++]},${dynamicArray[q]} have a product of ${mult}.`]
   
+
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
