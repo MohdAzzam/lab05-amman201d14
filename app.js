@@ -80,11 +80,16 @@ let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) {
   //eslint-disable-line
-  let sum=0;
-  for (let i = 0; i<testArray.length;i++){
-    sum+=testArray[i];
-  }
-  return [sum,`${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${sum} is their sum.`]
+  let count=0;
+
+  let firstTwoIndex=sum(testArray[0],testArray[1]);
+  let lastOne =sum(testArray[2],firstTwoIndex[0]);
+  count=lastOne;
+  // for (let i = 0; i<testArray.length;i++){
+  //   sum+=testArray[i];
+  // }
+  
+  return [count[0],`${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${count[0]} is their sum.`]
 }
 
 // Here is the test for sumArray(); uncomment it to run it
@@ -109,7 +114,7 @@ function multiplyArray(multArr) {
   let firstTwoIndex=multiply(testArray[0],testArray[1]);
   let lastOne =multiply(testArray[2],firstTwoIndex[0]);
 
-  return [lastOne[0],`The numbers ${testArray[0]},${testArray[1]},${testArray[2]} have a product of ${lastOne[0]}.`];
+  return [lastOne[0],`The numbers ${testArray[0]},${testArray[1]},${testArray[2]} have a product of ${lastOne[0]}.`]
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
@@ -142,7 +147,7 @@ function multiplyAnyArray(dynamicArray) {
   for (let i = 0; i<testDynamicArray.length;i++){
     mult*=testDynamicArray[i];
   }
-  
+
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
