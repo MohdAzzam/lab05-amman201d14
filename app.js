@@ -80,11 +80,16 @@ let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) {
   //eslint-disable-line
-  let sum=0;
-  for (let i = 0; i<testArray.length;i++){
-    sum+=testArray[i];
-  }
-  return [sum,`${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${sum} is their sum.`]
+  let count=0;
+
+  let firstTwoIndex=sum(testArray[0],testArray[1]);
+  let lastOne =sum(testArray[2],firstTwoIndex[0]);
+  count=lastOne;
+  // for (let i = 0; i<testArray.length;i++){
+  //   sum+=testArray[i];
+  // }
+  
+  return [count[0],`${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${count[0]} is their sum.`]
 }
 
 // Here is the test for sumArray(); uncomment it to run it
@@ -106,6 +111,8 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiplyArray(multArr) {
   //eslint-disable-line
+
+
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
