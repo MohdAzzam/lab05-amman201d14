@@ -111,7 +111,10 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiplyArray(multArr) {
   //eslint-disable-line
+  let firstTwoIndex=multiply(testArray[0],testArray[1]);
+  let lastOne =multiply(testArray[2],firstTwoIndex[0]);
 
+  return [lastOne[0],`The numbers ${testArray[0]},${testArray[1]},${testArray[2]} have a product of ${lastOne[0]}.`]
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
@@ -140,6 +143,11 @@ let testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) {
   //eslint-disable-line
+  let mult=1;
+  for (let i = 0; i<testDynamicArray.length;i++){
+    mult*=testDynamicArray[i];
+  }
+
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
